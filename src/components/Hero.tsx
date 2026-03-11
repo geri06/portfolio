@@ -14,10 +14,10 @@ export const Hero = () => {
         <div className="relative group" style={{ marginBottom: '2.5rem' }}>
           <div className="absolute -inset-2 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-700" />
           <img
-            src="/profile.jpg"
+            src={`${import.meta.env.BASE_URL}profile.jpg`}
             alt="Gerard Gómez Izquierdo"
             className="relative rounded-full object-cover border-4 border-white shadow-xl"
-            style={{ width: '14rem', height: '14rem', objectPosition: 'top' }}
+            style={{ width: '14rem', height: '14rem', objectPosition: '50% 1%' }}
           />
         </div>
 

@@ -44,7 +44,7 @@ export const Navbar = () => {
         </div>
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             download
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium border border-[#1d1d1f] text-[#1d1d1f] hover:bg-[#f5f5f7] transition-colors"
           >

@@ -34,7 +34,7 @@ export const SoftSkills = () => {
             <AnimatePresence mode="wait">
               <motion.img
                 key={current}
-                src={SOFT_SKILLS[current].image}
+                src={`${import.meta.env.BASE_URL}${SOFT_SKILLS[current].image.replace(/^\//, '')}`}
                 alt={SOFT_SKILLS[current].title}
                 className="absolute inset-0 w-full h-full object-cover"
                 initial={{ opacity: 0, x: 60 }}

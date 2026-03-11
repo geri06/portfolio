@@ -16,12 +16,12 @@ export const SOFT_SKILLS = [
   {
     image: "/soft-skills/photo3.jpg",
     title: "ARM2u Prosthetics Team",
-    description: "Collaborating with a multidisciplinary team of engineers and designers to build a functional AI-powered prosthetic arm."
+    description: "Leading the Software & AI department in a multidisciplinary team of engineers and designers to build a functional AI-powered prosthetic arm."
   },
   {
     image: "/soft-skills/photo4.jpg",
     title: "EPFL Research Lab",
-    description: "Adapting to a new research environment in Switzerland, working alongside international colleagues on cutting-edge biomedical engineering."
+    description: "Adapting to a new research environment in Switzerland, working alongside international colleagues on cutting-edge AI for prosthetics."
   }
 ];
 
@@ -89,12 +89,15 @@ export const PROJECTS = [
     links: [{ text: "Paper", url: "https://drive.google.com/file/d/1dGluYnPjG9SMGHs7DjsKM7OEqU8nbwOl/view?usp=sharing" }]
   },
   {
-    title: "VLM for Object Identification",
+    title: "Robotics VLM Object Detection & Barcode Scanning",
     subtitle: "Vision-Language Model Project",
-    description: "Designed and implemented a Vision-Language Model (VLM) pipeline for robust real-time object identification. By leveraging multimodal architectures that fuse visual features with natural language understanding, the system can identify and describe objects in complex scenes with high accuracy. The project focused on optimizing the inference pipeline for practical deployment, exploring prompt-engineering strategies and fine-tuning techniques to maximize zero-shot and few-shot identification performance across diverse object categories and environmental conditions.",
-    tags: ["VLM", "Computer Vision", "Deep Learning", "PyTorch", "Transformers"],
-    video: "",
-    links: [{ text: "GitHub", url: "#" }]
+    description: "Designed and implemented a multimodal Vision-Language Model (VLM) pipeline for robust real-time object identification and barcode scanning in robotics context. Using Grounding DINO, the system can identify and localize objects in complex scenes without specific pre-training, simply by generic text prompts like 'object'. It also includes a custom 1D signal processing pipeline for Code128 barcode localization and 3D pose estimation. The project establishes spatial semantic linking between the VLM's detected objects and the identified barcodes by evaluating geometric spatial containment.",
+    tags: ["VLM", "Grounding DINO", "Computer Vision", "HuggingFace", "Deep Learning", "PyTorch", "OpenCV"],
+    images: [
+      { url: "/projects/vlm_1.png", text: "Task 1: Open-set object detection using generic text prompts with Grounding DINO." },
+      { url: "/projects/vlm_2.png", text: "Task 2: Spatial Semantic Linking. Extracting barcode bounding boxes and normal surface vectors for specific objects requested to the VLM." }
+    ],
+    links: [{ text: "GitHub", url: "https://github.com/geri06/VLM-Coding-Challenge" }]
   },
 ];
 
