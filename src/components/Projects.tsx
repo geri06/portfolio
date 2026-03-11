@@ -115,7 +115,7 @@ export const Projects = () => {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7 }}
               className="flex flex-col items-center w-full"
-              style={{ gap: '4rem' }}
+              style={{ gap: '2rem' }}
             >
               {/* Text Content */}
               <div className="text-center" style={{ maxWidth: '56rem', marginLeft: 'auto', marginRight: 'auto' }}>
@@ -168,6 +168,25 @@ export const Projects = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Load More Projects Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          style={{ marginTop: '5rem', marginBottom: '1rem' }}
+        >
+          <a
+            href="https://github.com/geri06"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#1d1d1f] text-white font-medium hover:bg-[#424245] transition-colors shadow-md hover:shadow-lg"
+            style={{ fontSize: '1rem' }}
+          >
+            <span>Load More Projects</span>
+            <Github className="w-5 h-5" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

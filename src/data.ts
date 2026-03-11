@@ -82,7 +82,7 @@ export const PROJECTS = [
   },
   {
     title: "TinyML CNN for sEMG Decoding",
-    subtitle: "EPFL Research (Submitted to IROS 2026)",
+    subtitle: "EPFL Research (First Author, Submitted to IROS 2026)",
     description: "I developed an ultra-lightweight CNN-based regression architecture designed for the simultaneous and proportional control (SPC) of robotic prosthetic wrists. By implementing temporal-spatial input stacking, I embedded 200 ms of context directly into the first-layer kernels, successfully replacing computationally heavy recurrent units like LSTMs without losing predictive power. The model achieves a 99.3% parameter reduction (to 23k) through aggressive spatial downsampling and a 32-dimensional latent bottleneck to meet the strict power and memory constraints of wearable microcontrollers. This INT8-quantized framework delivers a decoding fidelity of R^2= 0.92 for isolated movements and R^2 = 0.84 for complex, coupled movements on a MCU. With an ultra-low 20 ms inference latency, the system comfortably exceeds the real-time requirements for seamless bionic control and matches the performance of GPU-reliant, state-of-the-art architectures. Conducted the full reserach cicle, from dataset recording from human subjects until model deployment.",
     tags: ["TinyML", "CNN", "Deep Learning", "Quantization", "Research", "Pytorch"],
     video: "https://www.youtube.com/embed/34WlDt_GbZ4",
