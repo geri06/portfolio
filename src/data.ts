@@ -1,5 +1,5 @@
 export const PARAGRAPHS = [
-  "I am driven by the tangible impact of my work. As an AI graduate from UPC with an exchange at EPFL, I have a solid technical foundation backed by a first-author IROS 2025 paper and other research experiences, but my focus is now on business-oriented application. I thrive on implementing state-of-the-art research to drive efficiency and innovation, ensuring that cutting-edge technology translates directly into a competitive business advantage and high-impact results. I am now looking for my next challenge at the intersection of AI and business strategy."
+  "I am driven by the tangible impact of my work. As an AI graduate from UPC with an exchange at EPFL, I have a solid technical foundation backed by a first-author IROS 2025 paper and other research experiences, but my focus is now on business-oriented application. I thrive on implementing state-of-the-art research to drive efficiency and innovation, ensuring that cutting-edge technology translates directly into a competitive business advantage and high-impact results. I am now looking for my next challenge at the intersection of AI and business impact."
 ];
 
 export const SOFT_SKILLS = [
@@ -81,6 +81,17 @@ export const PROJECTS = [
     links: [{ text: "Paper", url: "https://arxiv.org/pdf/2503.00576" }, { text: "GitHub", url: "https://github.com/geri06/IROS2025-IntentMotion" }]
   },
   {
+    title: "Company-Flow 🌊",
+    subtitle: "Internal Ops Intelligence Agent",
+    description: "An autonomous multi-agent system built to scan operational metrics, cross-reference them with internal strategy manuals, and autonomously draft data-driven outreach emails to customers before they escalate into problems. The backend, built with Python/FastAPI, LangGraph, and Langchain, orchestrates specialized AI agents including an Analyst Node for real-time SQL queries, a RAG Node with pgvector, a Writer Node powered by Llama 3 for personalized drafting, and a Notifier Node. The frontend features a sleek, dark-mode Ops Dashboard built with Next.js and vanilla CSS Modules, allowing the Customer Success team to monitor anomalies and trigger intelligence agents effortlessly.",
+    tags: ["LangGraph", "LangChain", "Python", "FastAPI", "SQL", "pgvector", "Llama 3", "Next.js"],
+    images: [
+      { url: "/projects/cf_1.png", text: "Ops Dashboard Interface seamlessly monitoring real-time operational metrics and pricing data." },
+      { url: "/projects/cf_2.png", text: "Autonomous Agent Workflow: Highlighting detected anomalies and generating data-driven, personalized outreach emails." }
+    ],
+    links: [{ text: "GitHub", url: "https://github.com/geri06/RAG-Agent-Restaurant" }]
+  },
+  {
     title: "TinyML CNN for sEMG Decoding",
     subtitle: "EPFL Research (First Author, Submitted to IROS 2026)",
     description: "I developed an ultra-lightweight CNN-based regression architecture designed for the simultaneous and proportional control (SPC) of robotic prosthetic wrists. By implementing temporal-spatial input stacking, I embedded 200 ms of context directly into the first-layer kernels, successfully replacing computationally heavy recurrent units like LSTMs without losing predictive power. The model achieves a 99.3% parameter reduction (to 23k) through aggressive spatial downsampling and a 32-dimensional latent bottleneck to meet the strict power and memory constraints of wearable microcontrollers. This INT8-quantized framework delivers a decoding fidelity of R^2= 0.92 for isolated movements and R^2 = 0.84 for complex, coupled movements on a MCU. With an ultra-low 20 ms inference latency, the system comfortably exceeds the real-time requirements for seamless bionic control and matches the performance of GPU-reliant, state-of-the-art architectures. Conducted the full reserach cicle, from dataset recording from human subjects until model deployment.",
@@ -102,9 +113,10 @@ export const PROJECTS = [
 ];
 
 export const SKILLS = [
-  { category: "Programming", items: ["Python", "C++"] },
+  { category: "Programming", items: ["Python", "C++", "SQL"] },
+  { category: "Web & Backend", items: ["FastAPI", "Next.js"] },
   { category: "Machine/Deep Learning & Data Science", items: ["PyTorch", "Tensorflow", "Scikit-learn", "OpenCV", "CNN", "RNN", "MLP", "Attention", "Pandas", "Numpy", "Scipy"] },
-  { category: "Generative AI", items: ["Transformers", "LLMs", "VLMs", "VAEs", "Diffusion Models", "GANs"] },
+  { category: "Generative AI", items: ["RAG", "Transformers", "LLMs", "VLMs", "LangChain", "LangGraph", "pgvector", "VAEs", "Diffusion Models", "GANs"] },
   { category: "Other Tools", items: ["ROS", "Git", "Cuda", "Signal Processing", "SLAM", "IMU", "RGB-D cameras", "2D LiDAR", "Gazebo", "EMG signals", "Microcontrollers"] }
 ];
 

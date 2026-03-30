@@ -11,7 +11,7 @@ const getLinkIcon = (text: string) => {
   return <ExternalLink className="w-4 h-4" />;
 };
 
-const ProjectCarousel = ({ images }: { images: { url: string; text: string; title?: string }[] }) => {
+const ProjectCarousel = ({ images, title }: { images: { url: string; text: string; title?: string }[], title: string }) => {
   const [current, setCurrent] = useState(0);
 
   const prev = () => setCurrent((c) => (c - 1 + images.length) % images.length);
@@ -20,7 +20,7 @@ const ProjectCarousel = ({ images }: { images: { url: string; text: string; titl
   return (
     <div className="relative w-full">
       {/* Browser Frame with Image Container */}
-      <BrowserFrame title={`~/robotics-vlm`}>
+      <BrowserFrame title={`~/${title}`}>
         <div className="relative w-full h-full min-h-[400px] bg-[#f5f5f7] overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.img
@@ -144,7 +144,7 @@ export const Projects = () => {
               {/* Browser Frame or Custom Carousel */}
               <div className="w-full max-w-4xl mx-auto">
                 {project.images ? (
-                  <ProjectCarousel images={project.images} />
+                  <ProjectCarousel images={project.images} title={project.title.toLowerCase().replace(/ /g, '-')} />
                 ) : (
                   <BrowserFrame title={`~/${project.title.toLowerCase().replace(/ /g, '-')}`}>
                     {project.video ? (
