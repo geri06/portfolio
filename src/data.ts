@@ -81,19 +81,8 @@ export const PROJECTS = [
     links: [{ text: "Paper", url: "https://arxiv.org/pdf/2503.00576" }, { text: "GitHub", url: "https://github.com/geri06/IROS2025-IntentMotion" }]
   },
   {
-    title: "Company-Flow 🌊",
-    subtitle: "Internal Ops Intelligence Agent",
-    description: "An autonomous multi-agent system built to scan operational metrics, cross-reference them with internal strategy manuals, and autonomously draft data-driven outreach emails to customers before they escalate into problems. The backend, built with Python/FastAPI, LangGraph, and Langchain, orchestrates specialized AI agents including an Analyst Node for real-time SQL queries, a RAG Node with pgvector, a Writer Node powered by Llama 3 for personalized drafting, and a Notifier Node. The frontend features a sleek, dark-mode Ops Dashboard built with Next.js and vanilla CSS Modules, allowing the Customer Success team to monitor anomalies and trigger intelligence agents effortlessly.",
-    tags: ["LangGraph", "LangChain", "Python", "FastAPI", "SQL", "pgvector", "Llama 3", "Next.js"],
-    images: [
-      { url: "/projects/cf_1.png", text: "Ops Dashboard Interface seamlessly monitoring real-time operational metrics and pricing data." },
-      { url: "/projects/cf_2.png", text: "Autonomous Agent Workflow: Highlighting detected anomalies and generating data-driven, personalized outreach emails." }
-    ],
-    links: [{ text: "GitHub", url: "https://github.com/geri06/RAG-Agent-Restaurant" }]
-  },
-  {
     title: "TinyML CNN for sEMG Decoding",
-    subtitle: "EPFL Research (First Author, Submitted to IROS 2026)",
+    subtitle: "EPFL Research (First Author, Accepted to IROS 2026)",
     description: "I developed an ultra-lightweight CNN-based regression architecture designed for the simultaneous and proportional control (SPC) of robotic prosthetic wrists. By implementing temporal-spatial input stacking, I embedded 200 ms of context directly into the first-layer kernels, successfully replacing computationally heavy recurrent units like LSTMs without losing predictive power. The model achieves a 99.3% parameter reduction (to 23k) through aggressive spatial downsampling and a 32-dimensional latent bottleneck to meet the strict power and memory constraints of wearable microcontrollers. This INT8-quantized framework delivers a decoding fidelity of R^2= 0.92 for isolated movements and R^2 = 0.84 for complex, coupled movements on a MCU. With an ultra-low 20 ms inference latency, the system comfortably exceeds the real-time requirements for seamless bionic control and matches the performance of GPU-reliant, state-of-the-art architectures. Conducted the full reserach cicle, from dataset recording from human subjects until model deployment.",
     tags: ["TinyML", "CNN", "Deep Learning", "Quantization", "Research", "Pytorch"],
     video: "https://www.youtube.com/embed/34WlDt_GbZ4",
@@ -109,6 +98,17 @@ export const PROJECTS = [
       { url: "/projects/vlm_2.png", text: "Task 2: Spatial Semantic Linking. Extracting barcode bounding boxes and normal surface vectors for specific objects requested to the VLM." }
     ],
     links: [{ text: "GitHub", url: "https://github.com/geri06/VLM-Coding-Challenge" }]
+  },
+  {
+    title: "Company-Flow 🌊",
+    subtitle: "Internal Ops Intelligence Agent",
+    description: "An autonomous multi-agent system built to scan operational metrics, cross-reference them with internal strategy manuals, and autonomously draft data-driven outreach emails to customers before they escalate into problems. The backend, built with Python/FastAPI, LangGraph, and Langchain, orchestrates specialized AI agents including an Analyst Node for real-time SQL queries, a RAG Node with pgvector, a Writer Node powered by Llama 3 for personalized drafting, and a Notifier Node. The frontend features a sleek, dark-mode Ops Dashboard built with Next.js and vanilla CSS Modules, allowing the Customer Success team to monitor anomalies and trigger intelligence agents effortlessly.",
+    tags: ["LangGraph", "LangChain", "Python", "FastAPI", "SQL", "pgvector", "Llama 3", "Next.js"],
+    images: [
+      { url: "/projects/cf_1.png", text: "Ops Dashboard Interface seamlessly monitoring real-time operational metrics and pricing data." },
+      { url: "/projects/cf_2.png", text: "Autonomous Agent Workflow: Highlighting detected anomalies and generating data-driven, personalized outreach emails." }
+    ],
+    links: [{ text: "GitHub", url: "https://github.com/geri06/RAG-Agent-Restaurant" }]
   },
 ];
 
@@ -127,7 +127,7 @@ export const EDUCATION = [
     date: "Sep 2025 – Feb 2026 (6 months)",
     grade: "6/6",
     highlights: [
-      "Research submitted to IROS 2026.",
+      "Research accepted to IROS 2026.",
       "Architected a TinyML CNN framework for the Simultaneous and Proportional Control (SPC) of multi-DoF wrist kinematics using 32-channel High-Density sEMG.",
       "Resolved the 'Embedded Gap' by reducing model parameters by 99.3% (from 3.3M to 23,000) through spectral-spatial input stacking and aggressive max-pooling optimization.",
       "Deployed and profiled on an ARM Cortex-M7, utilizing 8-bit Post-Training Quantization (INT8) to achieve a 20ms inference latency and 29.2 KB memory footprint.",
